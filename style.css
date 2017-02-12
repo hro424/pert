@@ -1,0 +1,11 @@
+td.number {
+  text-align: right;
+}
+
+td.select {
+  width: 200px;
+}
+
+button.header {
+  font-weight: bold;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Project Managment</title>
+  <link rel="stylesheet" href="style.css" type="text/css">
+  <link rel="stylesheet" href="jquery-ui.min.css" type="text/css">
+  <link rel="stylesheet" href="jquery.multiselect.css" type="text/css">
+  <script src="jquery-3.1.1.min.js"></script>
+  <script src="jquery-ui.min.js"></script>
+  <script src="jquery.multiselect.min.js"></script>
+  <script src="ui.js"></script>
+</head>
+
+<body>
+  <form name="activities">
+  <table>
+    <thead>
+      <tr>
+        <th><button type="button" class="header" onClick="sort_activity(this)">ID</button></th>
+        <th><button type="button" class="header" onClick="sort_activity(this)">Activity</button></th>
+        <th>Dependencies</th>
+        <th><button type="button" class="header" onClick="sort_activity(this)">Min</button></th>
+        <th><button type="button" class="header" onClick="sort_activity(this)">Max</button></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody id="table_body">
+      <tr>
+        <td class="number">000001</th>
+        <td>Sample Activity 01</td>
+        <td></td>
+        <td class="number">3</td>
+        <td class="number">7</td>
+        <td><button type="button" onClick="delete_activity(this)">Del</button></td>
+      </tr>
+    </tbody>
+
+    <tfoot>
+      <tr>
+        <td>
+        </td>
+        <td>
+          <input name="activity">
+        </td>
+        <td>
+          <select id="dependencies" name="dependencies" multiple>
+            <option>Select dependencies</option>
+          </select>
+        </td>
+        <td>
+          <input name="min" type="number">
+        </td>
+        <td>
+          <input name="max" type="number">
+        </td>
+      </tr>
+    </tfoot>
+  </table>
+  <button type="button" onClick="append_activity('table_body')">OK</button>
+  <button type="button" onClick="cancel()">Cancel</button>
+
+  </form>
+
+</body>
+
+</html>
